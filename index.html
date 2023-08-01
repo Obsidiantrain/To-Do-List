@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="list.css">
+</head>
+
+<body>
+    <h1>To-Do-List</h1>
+    <p>Get it going and get it done!</p>
+
+    <div class="container">
+
+        <input type="text" id="myInput" placeholder="Task" onkeydown="handleKeyPress(event)">
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="standard" class="standard-task">Standard</option>
+            <option value="daily" class="daily-task">Daily</option>
+        </select>
+        <button onclick="newElement()" class="addBtn">Click To Add</button>
+
+        <ul id="taskList"></ul>
+
+    </div>
+    <button id="deleteAllBtn" onclick="deleteAllTasks()">Delete All</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script src="sketch.js"></script>
+</body>
+
+</html>
